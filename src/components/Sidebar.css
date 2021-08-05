@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border-right: 1px solid #111;
 }
 .top {
   display: flex;
@@ -39,6 +40,7 @@
   flex-direction: column;
   align-items: right;
   padding: 0.5rem;
+  border-right: 1px solid #111;
 }
 .explorer__header {
   font-size: 0.9rem;

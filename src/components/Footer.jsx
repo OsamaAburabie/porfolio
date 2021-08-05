@@ -56,15 +56,7 @@ const Footer = () => {
       </div>
       <div className="footer__right">
         <div className="footer__button">
-          <svg
-            height="16"
-            viewBox="0 0 72 72"
-            fill="currentColor"
-            class="Bottombar_icon__2SsHQ"
-          >
-            <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-          </svg>
-          <p>Powered by React.js</p>
+          <p>JavaScript React</p>
         </div>
         <div className="footer__button">
           <svg
