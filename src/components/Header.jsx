@@ -1,6 +1,9 @@
 import React from "react";
 import "./Header.css";
 import Logo from "../images/Logo.png";
+import CloseIcon from "@material-ui/icons/Close";
+import CropDinIcon from "@material-ui/icons/CropDin";
+import MinimizeIcon from "@material-ui/icons/Minimize";
 function Header() {
   return (
     <div className="header">
@@ -19,9 +22,15 @@ function Header() {
         <p>Osama Aburabie - Visual Studio Code</p>
       </div>
       <div className="header__right">
-        <div className="red header__button"></div>
-        <div className="green header__button"></div>
-        <div className="yellow header__button"></div>
+        <div className="red header__button">
+          <CloseIcon className="header__icons" />
+        </div>
+        <div className=" header__button">
+          <CropDinIcon className="header__icons" />
+        </div>
+        <div className="header__button">
+          <MinimizeIcon className="header__icons" />
+        </div>
       </div>
     </div>
   );
