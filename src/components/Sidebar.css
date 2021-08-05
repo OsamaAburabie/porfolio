@@ -26,5 +26,63 @@
   background: #252a2e;
 }
 .active_sidebar_link {
-  border-left: #857ee2 2px solid;
+  border-left: #9392a0 2px solid;
+}
+
+.explorer {
+  height: 100%;
+  width: 13rem;
+  background: #1f2428;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  padding: 0.5rem;
+}
+.explorer__header {
+  font-size: 0.9rem;
+  color: lightgray;
+  margin-bottom: 1rem;
+  padding: 0 0.7rem;
+}
+.explorer__folder {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rotate-90deg {
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+}
+
+.hide-files {
+  display: none;
+}
+
+.file {
+  padding: 0.2rem 0.2rem;
+  display: flex;
+  align-items: center;
+  color: lightgray;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.file:hover {
+  color: #fff;
+}
+.file > img {
+  object-fit: contain;
+  height: 1.2rem;
+}
+.active-file {
+  color: gold;
+}
+.active-file:hover {
+  color: gold;
 }
