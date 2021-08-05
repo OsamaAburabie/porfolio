@@ -4,3 +4,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+main {
+  height: calc(100% - 3.3rem);
+  width: 100%;
+  display: flex;
+}
+.wrapper {
+  background: #2f353b;
+  flex: 1;
+  color: #fff;
+}

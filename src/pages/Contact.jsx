@@ -1,17 +1,17 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import "./Home.css";
-const Home = () => {
+
+const Contact = () => {
   return (
     <main>
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <h1 style={{ color: "fff" }}>Home</h1>
+        <h1>Contact</h1>
       </div>
     </main>
   );
 };
 
-export default Home;
+export default Contact;

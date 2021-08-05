@@ -1,17 +1,17 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import "./Home.css";
-const Home = () => {
+
+const Github = () => {
   return (
     <main>
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <h1 style={{ color: "fff" }}>Home</h1>
+        <h1>Github</h1>
       </div>
     </main>
   );
 };
 
-export default Home;
+export default Github;
