@@ -1,0 +1,30 @@
+.sidebar {
+  height: 100%;
+  width: 3.3rem;
+  background: #2f353b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__link {
+  width: 3.3rem;
+  height: 3.3rem;
+  display: grid;
+  place-items: center;
+}
+.sidebar__link:hover {
+  background: #252a2e;
+}
+.active_sidebar_link {
+  border-left: #857ee2 2px solid;
+}

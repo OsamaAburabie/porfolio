@@ -1,0 +1,61 @@
+.header {
+  height: 1.8rem;
+  width: 100vw;
+  background: #1f2428;
+  padding: 0rem 0.7rem 0rem 0.7rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.Logo {
+  object-fit: contain;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+}
+.header__left {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+  height: 100%;
+}
+
+.header__left > p {
+  padding: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__left > p:hover {
+  background: #454c53;
+}
+
+.header__center {
+  flex: 0.6;
+  text-align: center;
+}
+.header__right {
+  flex: 0.2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.header__button {
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+.red {
+  background: #f65354;
+}
+.green {
+  background: #65ec7b;
+}
+.yellow {
+  background: #f0f38b;
+}
