@@ -3,6 +3,10 @@
   height: 2rem;
   display: flex;
   background: #1f2428;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 .top-file {
   padding: 0.7rem 0.1rem 0.7rem 0.7rem;
