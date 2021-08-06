@@ -1,55 +1,40 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Topbar.css";
-import ReactLogo from "../images/ReactLogo.svg";
-import JsLogo from "../images/JavascriptLogo.svg";
-import CssLogo from "../images/CssLogo.svg";
-import HtmlLogo from "../images/HtmlLogo.svg";
-import GithubLogo from "../images/GithubLogo.svg";
+import { useContext } from "react";
+import { MainContext } from "../context/mainContext";
+import CloseIcon from "@material-ui/icons/Close";
+
 const Topbar = () => {
+  const { topBarItems, setTopBarItems } = useContext(MainContext);
+  //close the top bar
+  const closeTab = (id) => {
+    setTopBarItems(topBarItems.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="topbar">
-      <NavLink
-        to="/"
-        className="top-file"
-        activeClassName="active-top-bar"
-        exact
-      >
-        <img src={ReactLogo} alt="ReactLogo" />
-        <p>Home.jsx</p>
-      </NavLink>
-      <NavLink
-        to="/about"
-        className="top-file"
-        activeClassName="active-top-bar"
-      >
-        <img src={JsLogo} alt="ReactLogo" />
-        <p>About.js</p>
-      </NavLink>
-      <NavLink
-        to="/contact"
-        className="top-file"
-        activeClassName="active-top-bar"
-      >
-        <img src={CssLogo} alt="ReactLogo" />
-        <p>Contact.css</p>
-      </NavLink>
-      <NavLink
-        to="/projects"
-        className="top-file"
-        activeClassName="active-top-bar"
-      >
-        <img src={HtmlLogo} alt="ReactLogo" />
-        <p>Projects.html</p>
-      </NavLink>
-      <NavLink
-        to="/github"
-        className="top-file"
-        activeClassName="active-top-bar"
-      >
-        <img src={GithubLogo} alt="ReactLogo" />
-        <p>Github.md</p>
-      </NavLink>
+      {topBarItems &&
+        topBarItems.map((item) => {
+          return (
+            <NavLink
+              key={item.id}
+              to={item.to}
+              exact={item.exact}
+              className="top-file"
+              activeClassName="active-top-bar"
+            >
+              <img src={item.ico} alt={item.text} />
+              <p>{item.text}</p>
+              <CloseIcon
+                onClick={() => {
+                  closeTab(item.id);
+                }}
+                className="top-file-close"
+              />
+            </NavLink>
+          );
+        })}
     </div>
   );
 };

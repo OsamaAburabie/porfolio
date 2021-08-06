@@ -10,7 +10,40 @@ main {
   display: flex;
 }
 .wrapper {
-  background: #2f353b;
-  flex: 1;
+  background: #24292e;
   color: #fff;
+}
+
+section {
+  height: calc(100% - 2rem);
+  width: calc(100vw - 16.3rem);
+  overflow-y: scroll;
+  display: flex;
+}
+
+ol {
+  counter-reset: item;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+li {
+  display: block;
+  white-space: nowrap;
+  color: lightcoral;
+}
+li:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  margin-right: 1rem;
+  color: grey;
+}
+
+li > span {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+span > a {
+  text-decoration: none;
+  color: grey;
 }

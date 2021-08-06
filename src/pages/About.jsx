@@ -8,7 +8,9 @@ const About = () => {
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <h1>About</h1>
+        <section>
+          <h1>About</h1>
+        </section>
       </div>
     </main>
   );
