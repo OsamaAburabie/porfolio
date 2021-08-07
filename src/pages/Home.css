@@ -14,3 +14,7 @@
   font-size: 1.5rem;
   border: 5px solid #fff;
 }
+
+.contactButton:hover {
+  background: #272c30;
+}
