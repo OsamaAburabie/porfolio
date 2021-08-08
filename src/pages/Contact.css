@@ -5,20 +5,20 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* .terminal::-webkit-scrollbar {
+  display: none;
+} */
 .contactPage__top {
   padding: 1.5rem;
+  overflow: auto;
 }
 
 .terminal {
-  height: 17rem;
   background: #1f2428;
   border-top: 1px solid #111;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
-}
-
-.terminal::-webkit-scrollbar {
-  display: none;
 }
 
 .terminal__header {

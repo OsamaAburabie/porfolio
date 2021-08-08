@@ -17,7 +17,7 @@ main {
 section {
   height: calc(100% - 2rem);
   width: calc(100vw - 16.3rem);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   display: flex;
 }
 
