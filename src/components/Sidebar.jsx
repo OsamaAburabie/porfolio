@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { MainContext } from "../context/mainContext";
 const Sidebar = () => {
-  const { barItems, topBarItems } = useContext(MainContext);
+  const { barItems, topBarItems, showExplorer, setShowExplorer } =
+    useContext(MainContext);
   const [isOpen, setIsOpen] = useState(true);
 
   //this function will add item from sidebar to topbar if it does not exist
@@ -13,6 +14,10 @@ const Sidebar = () => {
       topBarItems.push(item);
     } else return;
   }
+
+  const toggleExplorer = () => {
+    setShowExplorer(!showExplorer);
+  };
   return (
     <>
       <div className="sidebar">
@@ -20,8 +25,10 @@ const Sidebar = () => {
           <NavLink
             to="/"
             exact
-            className="sidebar__link"
+            className={`sidebar__link `}
             activeClassName="active_sidebar_link"
+            // style={{ cursor: "pointer" }}
+            onClick={toggleExplorer}
           >
             <svg
               width="30"
@@ -85,7 +92,7 @@ const Sidebar = () => {
           </NavLink>
         </div>
       </div>
-      <div className="explorer">
+      <div className={`explorer ${showExplorer ? "" : "none"}`}>
         <div className="explorer__header">EXPLORER</div>
         <label onClick={() => setIsOpen(!isOpen)} className="explorer__folder">
           <svg

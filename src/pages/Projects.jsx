@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import Section from "../components/Section";
 
 const Projects = () => {
   return (
@@ -8,9 +9,9 @@ const Projects = () => {
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <section>
+        <Section>
           <h1>Projects</h1>
-        </section>
+        </Section>
       </div>
     </main>
   );

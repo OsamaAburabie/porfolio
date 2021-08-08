@@ -5,7 +5,7 @@ import CssLogo from "../images/CssLogo.svg";
 import HtmlLogo from "../images/HtmlLogo.svg";
 export const MainContext = createContext();
 const MainContextProvider = (props) => {
-  const [showExplorer, setShowExplorer] = useState(true);
+  const [showExplorer, setShowExplorer] = useState(false);
   const barItems = [
     { id: 1, to: "/", text: "Home.html", ico: HtmlLogo, exact: true },
     { id: 2, to: "/about", text: "About.js", ico: JsLogo, exact: false },

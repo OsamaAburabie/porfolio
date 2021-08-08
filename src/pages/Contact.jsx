@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import Section from "../components/Section";
+
 // import Typist from "react-typist";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -34,7 +36,7 @@ const Contact = () => {
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <section>
+        <Section>
           <div className="contactPage">
             <div className="contactPage__top">
               {/* <Typist avgTypingDelay={5} cursor={{ hideWhenDone: true }}> */}
@@ -238,7 +240,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </section>
+        </Section>
       </div>
     </main>
   );

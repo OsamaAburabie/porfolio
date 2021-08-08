@@ -4,6 +4,7 @@ import Topbar from "../components/Topbar";
 import Typist from "react-typist";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
+import Section from "../components/Section";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <Sidebar />
       <div className="wrapper">
         <Topbar />
-        <section>
+        <Section>
           <div className="homePage">
             <Typist avgTypingDelay={25} cursor={{ hideWhenDone: true }}>
               <ol>
@@ -58,7 +59,7 @@ const Home = () => {
               </NavLink>
             </Typist>
           </div>
-        </section>
+        </Section>
       </div>
     </main>
   );
