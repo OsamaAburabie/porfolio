@@ -5,6 +5,7 @@ import CssLogo from "../images/CssLogo.svg";
 import HtmlLogo from "../images/HtmlLogo.svg";
 export const MainContext = createContext();
 const MainContextProvider = (props) => {
+  const [showExplorer, setShowExplorer] = useState(true);
   const barItems = [
     { id: 1, to: "/", text: "Home.html", ico: HtmlLogo, exact: true },
     { id: 2, to: "/about", text: "About.js", ico: JsLogo, exact: false },
@@ -25,7 +26,15 @@ const MainContextProvider = (props) => {
 
   //you can use funtion
   return (
-    <MainContext.Provider value={{ barItems, topBarItems, setTopBarItems }}>
+    <MainContext.Provider
+      value={{
+        barItems,
+        topBarItems,
+        setTopBarItems,
+        showExplorer,
+        setShowExplorer,
+      }}
+    >
       {props.children}
     </MainContext.Provider>
   );

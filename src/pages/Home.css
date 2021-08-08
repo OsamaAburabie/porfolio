@@ -1,6 +1,7 @@
 .homePage {
   padding: 1.5rem;
   width: 100%;
+  overflow-x: scroll;
 }
 
 .contactButton {
