@@ -22,6 +22,13 @@ const Contact = () => {
   const [focusedName, setFocusedName] = useState(true);
   const [focusedEmail, setFocusedEmail] = useState(false);
   const [focusedMessage, setFocusedMessage] = useState(false);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
   return (
     <main>
       <Sidebar />
@@ -156,7 +163,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="terminal__body">
-                <form>
+                <form onSubmit={submitForm}>
                   <label className="terminal__text__label">
                     <span>OsamaAburabie@Contact</span>:
                     <span style={{ color: "lightblue" }}>~</span>$ What is your
@@ -224,7 +231,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <button className="sentButton">
+                  <button type="submit" className="sentButton">
                     <span>Send</span> <SendIcon fontSize="small" />
                   </button>
                 </form>
