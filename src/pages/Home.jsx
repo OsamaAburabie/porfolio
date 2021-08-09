@@ -1,10 +1,10 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import Section from "../components/Section";
 import Typist from "react-typist";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
-import Section from "../components/Section";
 
 const Home = () => {
   return (
