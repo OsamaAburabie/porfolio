@@ -14,9 +14,19 @@ const Sidebar = () => {
       topBarItems.push(item);
     } else return;
   }
-
+  // function to check if homepage
+  window.homepagecheck = function () {
+    var check = false;
+    if (document.location.pathname === "/") {
+      check = true;
+    }
+    return check;
+  };
+  //Check if on homepage then trigger sidebar
   const toggleExplorer = () => {
-    setShowExplorer(!showExplorer);
+    if (window.homepagecheck()) {
+      setShowExplorer(!showExplorer);
+    }
   };
   return (
     <>
